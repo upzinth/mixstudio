@@ -1,115 +1,121 @@
 import React from 'react';
-import { Check, Music, Mic2, Sliders, Film } from 'lucide-react';
+import { Check, Music, Mic2, Sliders, Film, Clock } from 'lucide-react';
 
 const Services = () => {
-    const servicesList = [
+    const services = [
         {
-            id: 'production',
-            title: 'Full Music Production',
-            icon: Music,
-            description: 'From a rough demo or just an idea, we build a full, radio-ready track.',
-            features: ['Composition & Arrangement', 'Professional Session Musicians', 'Programming & Sound Design', 'Guide Vocals'],
-            price: 'Starting at $500',
-            duration: '2-4 Weeks'
+            title: "มิกซ์ & มาสเตอร์ริ่ง",
+            description: "ปรับสมดุลทุกย่านเสียง เพิ่มมิติและความคมชัด เพื่อให้เพลงของคุณมีคุณภาพระดับมาตรฐานสากล",
+            price: "เริ่มต้น ฿3,500 / เพลง",
+            features: [
+                "ปรับสมดุล (Level & EQ)",
+                "เพิ่มมิติเสียง (Stereo Imaging)",
+                "Analog & Digital Processing",
+                "ไฟล์ความละเอียดสูง (WAV & MP3)",
+                "Mastered for Streaming"
+            ],
+            turnaround: "3-5 วัน"
         },
         {
-            id: 'mixing',
-            title: 'Mixing & Mastering',
-            icon: Sliders,
-            description: 'Transform your raw recordings into a polished, balanced, and loud master.',
-            features: ['Balance & EQ', 'Compression & Saturation', 'Vocal Tuning (Melodyne)', 'Mastering for Streaming'],
-            price: 'Starting at $150/track',
-            duration: '3-5 Days'
+            title: "รับทำเพลงครบวงจร",
+            description: "ดูแลทุกขั้นตอนตั้งแต่ออกแบบเมโลดี้, เรียบเรียงดนตรี, บันทึกเสียง จนถึงขั้นตอนสุดท้าย",
+            price: "เริ่มต้น ฿15,000 / เพลง",
+            features: [
+                "แต่งเนื้อร้อง & ทำนอง",
+                "เรียบเรียงดนตรี (Arrangement)",
+                "บันทึกเสียงเครื่องดนตรีจริง",
+                "คุมร้อง & บันทึกเสียง",
+                "รวมค่า Mix & Master"
+            ],
+            turnaround: "10-14 วัน"
         },
         {
-            id: 'vocal',
-            title: 'Vocal Production',
-            icon: Mic2,
-            description: 'Pitch correction, timing alignment, and harmony creation.',
-            features: ['Natural Pitch Correction', 'Creative Vocal Effects', 'Harmony Arrangement', 'De-essing & Cleanup'],
-            price: 'Starting at $80/track',
-            duration: '1-2 Days'
+            title: "จูนเสียงร้อง & แก้ไขเสียง",
+            description: "แก้ไขพิทช์เสียงร้องให้ตรงคีย์อย่างเป็นธรรมชาติ และจัดการจังหวะให้แม่นยำ (Time Alignment)",
+            price: "เริ่มต้น ฿1,500 / เพลง",
+            features: [
+                "Melodyne & Auto-Tune",
+                "แก้ไขจังหวะร้อง (Time Editing)",
+                "ปรับเนื้อเสียงให้ใสสะอาด",
+                "สร้างไลน์ประสาน (Harmony)",
+                "ส่งงานเป็น Stems"
+            ],
+            turnaround: "2 วัน"
         },
         {
-            id: 'soundtrack',
-            title: 'Soundtrack & Foley',
-            icon: Film,
-            description: 'Custom audio for films, games, and commercials.',
-            features: ['Original Score', 'Sound Effects (Foley)', 'Voiceover Recording', 'Audio Branding'],
-            price: 'Custom Quote',
-            duration: 'Project Based'
+            title: "ดนตรีประกอบ (Score & OST)",
+            description: "สร้างสรรค์ดนตรีประกอบสำหรับภาพยนตร์, โฆษณา, เกม หรือสื่อออนไลน์ เพื่อสื่ออารมณ์ที่คุณต้องการ",
+            price: "ติดต่อสอบถาม",
+            features: [
+                "Orchestral / Cinematic / Electronic",
+                "Sound Design & Foley",
+                "Synchronized to Picture",
+                "Broadcast Standards",
+                "ลิขสิทธิ์ถูกต้อง"
+            ],
+            turnaround: "7-10 วัน"
         }
     ];
 
     return (
         <div className="w-full pt-20">
-            <section className="bg-brand-black py-20">
-                <div className="container mx-auto px-6 text-center">
-                    <h1 className="text-4xl md:text-6xl font-heading font-bold text-brand-white mb-6">Our <span className="text-brand-gold">Services</span></h1>
+            {/* Header */}
+            <section className="bg-brand-black py-20 relative overflow-hidden">
+                <div className="absolute inset-0 bg-brand-gold/5 z-0"></div>
+                <div className="container mx-auto px-6 relative z-10 text-center">
+                    <h1 className="text-4xl md:text-6xl font-heading font-bold text-brand-white mb-6">บริการ <span className="text-brand-gold">ของเรา</span></h1>
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                        Comprehensive audio solutions tailored to your unique needs. transparent pricing, professional results.
+                        โซลูชั่นเสียงครบวงจร เพื่อผลงานที่โดดเด่นและเป็นมืออาชีพที่สุดสำหรับคุณ
                     </p>
                 </div>
             </section>
 
-            <section className="py-12 bg-brand-black">
+            <section className="py-20 bg-brand-black">
                 <div className="container mx-auto px-6">
-                    <div className="space-y-24">
-                        {servicesList.map((service, index) => (
-                            <div key={service.id} className={`flex flex-col md:flex-row gap-12 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-                                <div className="flex-1">
-                                    <div className="flex items-center gap-4 mb-6">
-                                        <div className="w-16 h-16 bg-brand-gray/50 rounded-2xl flex items-center justify-center text-brand-gold border border-brand-gold/20">
-                                            <service.icon size={32} />
-                                        </div>
-                                        <h2 className="text-3xl font-heading font-bold text-brand-white">{service.title}</h2>
-                                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                        {services.map((service, index) => (
+                            <div key={index} className="bg-brand-gray/20 border border-white/5 rounded-2xl p-8 hover:border-brand-gold/30 transition-all group">
+                                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-brand-gold transition-colors">{service.title}</h3>
+                                <p className="text-gray-400 mb-6 min-h-[50px]">{service.description}</p>
 
-                                    <p className="text-gray-400 text-lg mb-8 leading-relaxed">
-                                        {service.description}
-                                    </p>
+                                <div className="text-3xl font-bold text-brand-gold mb-6 font-heading">{service.price}</div>
 
-                                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                                        {service.features.map((feature, i) => (
-                                            <li key={i} className="flex items-center text-gray-300">
-                                                <Check size={18} className="text-brand-gold mr-3" />
+                                <div className="bg-brand-black/50 rounded-xl p-6 mb-6">
+                                    <ul className="space-y-3">
+                                        {service.features.map((feature, idx) => (
+                                            <li key={idx} className="flex items-center text-gray-300 text-sm">
+                                                <Check size={16} className="text-brand-gold mr-3 flex-shrink-0" />
                                                 {feature}
                                             </li>
                                         ))}
                                     </ul>
-
-                                    <div className="flex flex-col sm:flex-row gap-6 border-t border-white/10 pt-8">
-                                        <div>
-                                            <span className="block text-xs uppercase text-brand-gold tracking-wider mb-1">Pricing</span>
-                                            <span className="text-xl font-bold text-white">{service.price}</span>
+                                    <div className="flex items-center justify-between pt-4 border-t border-white/5">
+                                        <div className="flex items-center text-gray-500 text-sm">
+                                            <Clock size={16} className="mr-2" />
+                                            ระยะเวลา: {service.turnaround}
                                         </div>
-                                        <div>
-                                            <span className="block text-xs uppercase text-brand-gold tracking-wider mb-1">Turnaround</span>
-                                            <span className="text-xl font-bold text-white">{service.duration}</span>
-                                        </div>
-                                        <div className="sm:ml-auto">
-                                            <button className="w-full sm:w-auto px-8 py-3 border border-brand-gold text-brand-gold font-bold rounded-lg hover:bg-brand-gold hover:text-black transition-all">
-                                                Book Now
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="flex-1 w-full">
-                                    <div className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/5 group">
-                                        <div className="absolute inset-0 bg-brand-black/50 z-10 flex items-center justify-center group-hover:bg-brand-black/40 transition-all">
-                                            <span className="text-white font-heading font-bold text-lg tracking-widest border border-white px-6 py-2 rounded uppercase backdrop-blur-sm">Example Work</span>
-                                        </div>
-                                        <img
-                                            src={`https://images.unsplash.com/photo-${index === 0 ? '1514525253440-b393452e6193' : index === 1 ? '1598488035139-bdbb2231ce04' : index === 2 ? '1516280440614-6697288d5d38' : '1478720568477-152d9b164e63'}?q=80&w=1000&auto=format&fit=crop`}
-                                            className="w-full h-full object-cover"
-                                            alt={service.title}
-                                        />
+                                        <button className="text-brand-white font-bold text-sm tracking-wide group-hover:underline decoration-brand-gold underline-offset-4">
+                                            จองคิวบริการ →
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                         ))}
                     </div>
+                </div>
+            </section >
+
+            <section className="py-20 bg-brand-gray/10 text-center">
+                <div className="container mx-auto px-6">
+                    <h2 className="text-3xl font-heading font-bold text-brand-white mb-4">
+                        มีโปรเจกต์พิเศษ?
+                    </h2>
+                    <p className="text-gray-400 mb-8">
+                        หากคุณมีความต้องการที่แตกต่าง เรายินดีให้คำปรึกษาและออกแบบแพ็คเกจที่เหมาะสมกับคุณ
+                    </p>
+                    <button className="px-8 py-3 border border-brand-gold text-brand-gold font-bold rounded-full hover:bg-brand-gold hover:text-brand-black transition-colors">
+                        ติดต่อสอบถาม
+                    </button>
                 </div>
             </section>
         </div>

@@ -8,9 +8,9 @@ const About = () => {
             <section className="bg-brand-black py-20 relative overflow-hidden">
                 <div className="absolute inset-0 bg-brand-gold/5 z-0"></div>
                 <div className="container mx-auto px-6 relative z-10 text-center">
-                    <h1 className="text-4xl md:text-6xl font-heading font-bold text-brand-white mb-6">About Mix<span className="text-brand-gold">Studio</span></h1>
+                    <h1 className="text-4xl md:text-6xl font-heading font-bold text-brand-white mb-6">เกี่ยวกับ <span className="text-brand-gold">MixStudio</span></h1>
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                        Where passion meets precision. We are a team of dedicated audio engineers and producers committed to bringing your musical vision to life.
+                        ที่ซึ่งความหลงใหลพบกับความแม่นยำ ทีมวิศวกรเสียงและโปรดิวเซอร์มืออาชีพของเรามุ่งมั่นที่จะทำให้วิสัยทัศน์ทางดนตรีของคุณกลายเป็นจริง
                     </p>
                 </div>
             </section>
@@ -27,24 +27,24 @@ const About = () => {
                             />
                         </div>
                         <div>
-                            <h2 className="text-3xl font-heading font-bold text-brand-white mb-6">Our <span className="text-brand-gold">Story</span></h2>
+                            <h2 className="text-3xl font-heading font-bold text-brand-white mb-6">เรื่องราว <span className="text-brand-gold">ของเรา</span></h2>
                             <p className="text-gray-400 mb-6 leading-relaxed">
-                                Founded in 2015, MixStudio began as a small project studio with a big dream: to provide major-label quality sound to independent artists. Over the years, we've grown into a full-service production house, working with artists from across the globe and spanning every genre imaginable.
+                                ก่อตั้งขึ้นในปี 2015 MixStudio เริ่มต้นจากโฮมสตูดิโอเล็กๆ ด้วยความฝันที่ยิ่งใหญ่ คือการมอบเสียงคุณภาพระดับค่ายเพลงใหญ่ให้กับศิลปินอิสระ ตลอดหลายปีที่ผ่านมา เราเติบโตเป็นโปรดักชั่นเฮาส์ครบวงจร ทำงานร่วมกับศิลปินจากทั่วโลกในหลากหลายแนวเพลง
                             </p>
                             <p className="text-gray-400 mb-8 leading-relaxed">
-                                We believe that every artist deserves to be heard at their best. That's why we combine state-of-the-art analog gear with the latest digital technology to create a sound that is both classic and modern.
+                                เราเชื่อว่าศิลปินทุกคนสมควรได้รับการได้ยินในเวอร์ชันที่ดีที่สุด นั่นคือเหตุผลที่เราผสมผสานอุปกรณ์อนาล็อกระดับตำนานเข้ากับเทคโนโลยีดิจิทัลล่าสุด เพื่อสร้างเสียงที่มีเอกลักษณ์ทั้งคลาสสิกและทันสมัย
                             </p>
 
                             <div className="grid grid-cols-2 gap-6">
                                 <div className="p-4 bg-brand-gray/30 rounded-lg border border-white/5">
                                     <Target className="text-brand-gold mb-3" size={24} />
-                                    <h3 className="font-bold text-white mb-2">Our Mission</h3>
-                                    <p className="text-sm text-gray-500">To empower artists with professional sound that stands out in a crowded industry.</p>
+                                    <h3 className="font-bold text-white mb-2">ภารกิจของเรา</h3>
+                                    <p className="text-sm text-gray-500">เพื่อเพิ่มขีดความสามารถให้ศิลปินด้วยเสียงระดับมืออาชีพที่โดดเด่นในอุตสาหกรรม</p>
                                 </div>
                                 <div className="p-4 bg-brand-gray/30 rounded-lg border border-white/5">
                                     <Heart className="text-brand-gold mb-3" size={24} />
-                                    <h3 className="font-bold text-white mb-2">Our Passion</h3>
-                                    <p className="text-sm text-gray-500">Music is more than just sound; it's emotion, and we treat every project with care.</p>
+                                    <h3 className="font-bold text-white mb-2">ความหลงใหลของเรา</h3>
+                                    <p className="text-sm text-gray-500">ดนตรีเป็นมากกว่าเสียง มันคืออารมณ์ และเราดูแลทุกโปรเจกต์ด้วยใจ</p>
                                 </div>
                             </div>
                         </div>
@@ -56,8 +56,8 @@ const About = () => {
             <section className="py-20 bg-brand-gray/10">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-white mb-4">Meet the <span className="text-brand-gold">Team</span></h2>
-                        <p className="text-gray-400">The ears behind your next hit.</p>
+                        <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-white mb-4">พบกับ <span className="text-brand-gold">ทีมงาน</span></h2>
+                        <p className="text-gray-400">ผู้อยู่เบื้องหลังความสำเร็จของคุณ</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -73,7 +73,7 @@ const About = () => {
                                 <div className="p-6">
                                     <h3 className="text-xl font-bold text-white mb-1">Alex Producer {member}</h3>
                                     <p className="text-brand-gold text-sm mb-4">Senior Audio Engineer</p>
-                                    <p className="text-gray-500 text-sm">10+ years of experience working with top chart artists.</p>
+                                    <p className="text-gray-500 text-sm">ประสบการณ์กว่า 10 ปี ร่วมงานกับศิลปินระดับท็อปชาร์ต</p>
                                 </div>
                             </div>
                         ))}

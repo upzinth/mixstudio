@@ -9,7 +9,7 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Preloader from './components/Preloader';
 
-const ClientArea = () => <div className="pt-32 text-center text-white">Client Area Login (Coming Soon)</div>;
+const ClientArea = () => <div className="pt-32 text-center text-white">เข้าสู่ระบบสมาชิก (เร็วๆ นี้)</div>;
 
 function App() {
     const [loading, setLoading] = useState(true);

@@ -38,7 +38,7 @@ const Preloader = ({ onComplete }) => {
                 <h1 className="text-4xl md:text-6xl font-heading font-bold text-brand-white mb-4">
                     Mix<span className="text-brand-gold">Studio</span>
                 </h1>
-                <p className="text-brand-gold tracking-widest text-sm uppercase">Loading Experience</p>
+                <p className="text-brand-gold tracking-widest text-sm uppercase">กำลังเข้าสู่เว็บไซต์</p>
             </div>
             <div className="absolute bottom-0 left-0 w-full h-1 bg-brand-gray/20">
                 <div ref={progressRef} className="h-full bg-brand-gold origin-left scale-x-0 w-full"></div>

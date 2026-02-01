@@ -17,7 +17,7 @@ const ServiceCard = ({ title, description, icon: Icon }) => {
                 </p>
 
                 <span className="inline-flex items-center text-sm font-bold text-brand-white group-hover:text-brand-gold transition-colors">
-                    Learn More <ArrowRight size={16} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
+                    อ่านเพิ่มเติม <ArrowRight size={16} className="ml-2 transform group-hover:translate-x-1 transition-transform" />
                 </span>
             </div>
         </div>

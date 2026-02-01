@@ -2,36 +2,42 @@ import React, { useState } from 'react';
 import { Play } from 'lucide-react';
 
 const Portfolio = () => {
-    const [filter, setFilter] = useState('all');
+    const [activeCategory, setActiveCategory] = useState('ทั้งหมด');
 
+    const categories = ['ทั้งหมด', 'โปรดิวซ์', 'มิกซ์ & มาสเตอร์', 'ซาวด์แทร็ก'];
+
+    // Mock Projects Data
     const projects = [
-        { id: 1, title: 'Summer Vibes', artist: 'Jane Doe', category: 'production', image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2070&auto=format&fit=crop' },
-        { id: 2, title: 'Deep Ocean', artist: 'The Whales', category: 'mixing', image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop' },
-        { id: 3, title: 'Podcast Intro', artist: 'Tech Talk', category: 'soundtrack', image: 'https://images.unsplash.com/photo-1478737270239-2f63b8625881?q=80&w=2038&auto=format&fit=crop' },
-        { id: 4, title: 'Acoustic Soul', artist: 'John Smith', category: 'production', image: 'https://images.unsplash.com/photo-1465225314224-587cd83d322b?q=80&w=2070&auto=format&fit=crop' },
-        { id: 5, title: 'Urban Night', artist: 'City Lights', category: 'mixing', image: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop' },
-        { id: 6, title: 'Game OST', artist: 'Indie Devs', category: 'soundtrack', image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop' },
+        { id: 1, title: 'Neon Dreams', artist: 'Lunar Soul', category: 'โปรดิวซ์', image: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=2070&auto=format&fit=crop' },
+        { id: 2, title: 'Midnight City', artist: 'The Voyagers', category: 'มิกซ์ & มาสเตอร์', image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=2070&auto=format&fit=crop' },
+        { id: 3, title: 'Ocean Waves', artist: 'Ambient Collective', category: 'ซาวด์แทร็ก', image: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop' },
+        { id: 4, title: 'Retro Vibes', artist: 'Synthwave King', category: 'โปรดิวซ์', image: 'https://images.unsplash.com/photo-1514525253440-b393452e6193?q=80&w=2070&auto=format&fit=crop' },
+        { id: 5, title: 'Acoustic Sessions', artist: 'Sarah Jenkins', category: 'มิกซ์ & มาสเตอร์', image: 'https://images.unsplash.com/photo-1485579149621-3123dd979885?q=80&w=2070&auto=format&fit=crop' },
+        { id: 6, title: 'Epic Journey', artist: 'Cinematic Orchestra', category: 'ซาวด์แทร็ก', image: 'https://images.unsplash.com/photo-1507838153414-b4b713384ebd?q=80&w=2070&auto=format&fit=crop' },
     ];
 
-    const filteredProjects = filter === 'all' ? projects : projects.filter(p => p.category === filter);
+    const filteredProjects = activeCategory === 'ทั้งหมด'
+        ? projects
+        : projects.filter(project => project.category === activeCategory);
 
     return (
         <div className="w-full pt-20">
-            <section className="bg-brand-black py-20">
-                <div className="container mx-auto px-6 text-center">
-                    <h1 className="text-4xl md:text-6xl font-heading font-bold text-brand-white mb-6">Our <span className="text-brand-gold">Work</span></h1>
-                    <p className="text-gray-400 max-w-2xl mx-auto text-lg mb-12">
-                        Listen to some of our recent projects. Quality you can hear.
+            {/* Header */}
+            <section className="bg-brand-black py-20 relative overflow-hidden">
+                <div className="absolute inset-0 bg-brand-gold/5 z-0"></div>
+                <div className="container mx-auto px-6 relative z-10 text-center">
+                    <h1 className="text-4xl md:text-6xl font-heading font-bold text-brand-white mb-6">ผลงาน <span className="text-brand-gold">ของเรา</span></h1>
+                    <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+                        รวมผลงานที่เราภูมิใจ จากศิลปินหลากหลายแนวเพลงที่เราได้มีส่วนร่วมในการสร้างสรรค์
                     </p>
-
-                    <div className="flex flex-wrap justify-center gap-4">
-                        {['all', 'production', 'mixing', 'soundtrack'].map((cat) => (
+                    <div className="flex flex-wrap justify-center gap-4 mt-12">
+                        {categories.map((cat) => (
                             <button
                                 key={cat}
-                                onClick={() => setFilter(cat)}
-                                className={`px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider transition-all ${filter === cat
-                                        ? 'bg-brand-gold text-brand-black'
-                                        : 'bg-transparent border border-white/20 text-white hover:border-brand-gold hover:text-brand-gold'
+                                onClick={() => setActiveCategory(cat)}
+                                className={`px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider transition-all ${activeCategory === cat
+                                    ? 'bg-brand-gold text-brand-black'
+                                    : 'bg-transparent border border-white/20 text-white hover:border-brand-gold hover:text-brand-gold'
                                     }`}
                             >
                                 {cat}

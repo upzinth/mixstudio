@@ -68,37 +68,37 @@ const Home = () => {
 
     const services = [
         {
-            title: 'Full Music Production',
-            description: 'From melody composition to arrangement, we create complete songs tailored to your style.',
+            title: 'รับทำเพลงครบวงจร',
+            description: 'บริการสร้างสรรค์บทเพลงตั้งแต่เริ่มแต่งทำนอง เรียบเรียง ไปจนถึงขั้นตอนสุดท้ายตามสไตล์ที่คุณต้องการ',
             icon: Music
         },
         {
-            title: 'Vocal Tuning & Key Change',
-            description: 'Professional pitch correction and key adjustment to match your vocal range perfectly.',
+            title: 'จูนเสียงร้อง & ปรับคีย์',
+            description: 'แก้ไขระดับเสียงร้องให้ตรงคีย์อย่างเป็นธรรมชาติ และปรับคีย์เพลงให้เข้ากับช่วงเสียงของคุณ',
             icon: Mic2
         },
         {
-            title: 'Mixing & Mastering',
-            description: 'Polishing your tracks to industry standards with top-tier analog and digital gear.',
+            title: 'มิกซ์ & มาสเตอร์ริ่ง',
+            description: 'ปรับแต่งรายละเอียดเสียงให้คมชัด มีมิติ และได้มาตรฐานระดับสากล ด้วยอุปกรณ์คุณภาพสูง',
             icon: Sliders
         },
         {
-            title: 'Soundtrack & Voiceover',
-            description: 'Cinematic scores and professional voice recording for media, ads, and films.',
+            title: 'ดนตรีประกอบ & เสียงพากย์',
+            description: 'สร้างสรรค์ดนตรีประกอบภาพยนตร์ โฆษณา และรับบันทึกเสียงพากย์คุณภาพระดับสตูดิโอ',
             icon: Film
         },
         {
-            title: 'Online Music Courses',
-            description: 'Learn music production from the experts with our comprehensive online lessons.',
+            title: 'สอนทำเพลงออนไลน์',
+            description: 'คอร์สเรียนทำเพลงออนไลน์ โดยโปรดิวเซอร์มืออาชีพ ที่จะสอนเทคนิคแบบเจาะลึก',
             icon: GraduationCap
         }
     ];
 
     const stats = [
-        { number: '500+', label: 'Projects Completed' },
-        { number: '50+', label: 'Happy Clients' },
-        { number: '10+', label: 'Years Experience' },
-        { number: '100%', label: 'Quality Guarantee' }
+        { number: '500+', label: 'โปรเจกต์ที่สำเร็จ' },
+        { number: '50+', label: 'ลูกค้าที่พึงพอใจ' },
+        { number: '10+', label: 'ปีแห่งประสบการณ์' },
+        { number: '100%', label: 'การันตีคุณภาพ' }
     ];
 
     return (
@@ -115,19 +115,19 @@ const Home = () => {
                 <div className="relative z-20 container mx-auto px-6 text-center">
                     <div ref={titleRef}>
                         <h1 className="text-5xl md:text-7xl font-heading font-bold text-brand-white mb-6 leading-tight">
-                            Professional Music <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-200">Production Services</span>
+                            บริการรับทำเพลง <br />
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-yellow-200">และคีย์เสียงคุณภาพระดับมืออาชีพ</span>
                         </h1>
                     </div>
                     <p ref={subtitleRef} className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 font-light">
-                        Elevate your sound with our premium mixing, mastering, and production services. Designed for artists who refuse to compromise on quality.
+                        ยกระดับผลงานของคุณด้วยบริการระดับพรีเมียม ทั้งการมิกซ์ มาสเตอร์ริ่ง และการผลิตเพลง ที่ออกแบบมาเพื่อศิลปินที่ต้องการคุณภาพสูงสุด
                     </p>
                     <div ref={ctaRef} className="flex flex-col md:flex-row justify-center gap-4">
                         <button className="px-8 py-3 bg-brand-gold text-brand-black font-bold rounded-full hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all transform hover:-translate-y-1">
-                            Explore Services
+                            ดูบริการของเรา
                         </button>
                         <button className="px-8 py-3 border border-brand-white text-brand-white font-bold rounded-full hover:bg-white hover:text-black transition-all">
-                            View Portfolio
+                            ชมผลงานตัวอย่าง
                         </button>
                     </div>
                 </div>
@@ -151,9 +151,9 @@ const Home = () => {
             <section className="py-20 bg-brand-black">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-16">
-                        <span className="text-brand-gold font-bold tracking-widest text-sm uppercase">What We Do</span>
+                        <span className="text-brand-gold font-bold tracking-widest text-sm uppercase">สิ่งที่เราทำ</span>
                         <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-white mt-3">
-                            Premium <span className="text-gray-500 font-light">Services</span>
+                            บริการ <span className="text-gray-500 font-light">ระดับพรีเมียม</span>
                         </h2>
                     </div>
 
@@ -165,7 +165,7 @@ const Home = () => {
 
                     <div className="mt-16 text-center">
                         <button className="text-brand-white underline underline-offset-4 decoration-brand-gold hover:text-brand-gold transition-colors">
-                            View All Services
+                            ดูบริการทั้งหมด
                         </button>
                     </div>
                 </div>
@@ -176,13 +176,13 @@ const Home = () => {
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="flex justify-between items-end mb-12">
                         <div>
-                            <span className="text-brand-gold font-bold tracking-widest text-sm uppercase">Our Work</span>
+                            <span className="text-brand-gold font-bold tracking-widest text-sm uppercase">ผลงานของเรา</span>
                             <h2 className="text-3xl md:text-4xl font-heading font-bold text-brand-white mt-3">
-                                Featured <span className="text-gray-500 font-light">Projects</span>
+                                ตัวอย่าง <span className="text-gray-500 font-light">โปรเจกต์</span>
                             </h2>
                         </div>
                         <button className="hidden md:flex items-center text-brand-white hover:text-brand-gold transition-colors">
-                            View Full Portfolio <ArrowRight size={16} className="ml-2" />
+                            ดูผลงานทั้งหมด <ArrowRight size={16} className="ml-2" />
                         </button>
                     </div>
 
@@ -197,8 +197,8 @@ const Home = () => {
                                     </button>
                                 </div>
                                 <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                                    <h3 className="text-xl font-bold text-white">Project Name {item}</h3>
-                                    <p className="text-brand-gold text-sm">Mixing & Mastering</p>
+                                    <h3 className="text-xl font-bold text-white">ชื่อผลงาน {item}</h3>
+                                    <p className="text-brand-gold text-sm">มิกซ์ & มาสเตอร์ริ่ง</p>
                                 </div>
                             </div>
                         ))}
@@ -210,10 +210,10 @@ const Home = () => {
             <section className="py-24 relative overflow-hidden">
                 <div className="absolute inset-0 bg-brand-gold/10"></div>
                 <div className="container mx-auto px-6 text-center relative z-10">
-                    <h2 className="text-4xl md:text-5xl font-heading font-bold text-brand-white mb-8">Ready to elevate your sound?</h2>
-                    <p className="text-gray-400 mb-10 max-w-2xl mx-auto">Join hundreds of satisfied artists who have trusted MixStudio with their musical vision.</p>
+                    <h2 className="text-4xl md:text-5xl font-heading font-bold text-brand-white mb-8">พร้อมที่จะยกระดับเสียงของคุณหรือยัง?</h2>
+                    <p className="text-gray-400 mb-10 max-w-2xl mx-auto">เข้าร่วมกับศิลปินนับร้อยที่ไว้วางใจให้ MixStudio ดูแลวิสัยทัศน์ทางดนตรีของพวกเขา</p>
                     <button className="px-10 py-4 bg-brand-gold text-brand-black font-bold text-lg rounded-full hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] transition-all transform hover:-translate-y-1">
-                        Start Your Project
+                        เริ่มโปรเจกต์ของคุณ
                     </button>
                 </div>
             </section>
