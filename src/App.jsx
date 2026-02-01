@@ -9,8 +9,6 @@ import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import Preloader from './components/Preloader';
 
-const ClientArea = () => <div className="pt-32 text-center text-white">เข้าสู่ระบบสมาชิก (เร็วๆ นี้)</div>;
-
 function App() {
     const [loading, setLoading] = useState(true);
 
@@ -26,7 +24,6 @@ function App() {
                         <Route path="portfolio" element={<Portfolio />} />
                         <Route path="blog" element={<Blog />} />
                         <Route path="contact" element={<Contact />} />
-                        <Route path="client-area" element={<ClientArea />} />
                     </Route>
                 </Routes>
             </Router>

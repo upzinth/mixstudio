@@ -1,56 +1,63 @@
 import React from 'react';
-import { Calendar, User } from 'lucide-react';
+import { Calendar, User, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
     // Mock Blog Data
     const posts = [
         {
             id: 1,
-            title: "การทำมาสเตอร์ริ่งสำคัญอย่างไรกับเพลงของคุณ?",
-            excerpt: "เจาะลึกกระบวนการมาสเตอร์ริ่ง และเหตุผลว่าทำไมมันถึงเป็นขั้นตอนสุดท้ายที่ขาดไม่ได้ก่อนปล่อยเพลง",
-            image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=2070&auto=format&fit=crop",
-            date: "15 พ.ค. 2024",
-            category: "Tips & Tricks"
+            title: "Building Scalable APIs with FastAPI",
+            excerpt: "Learn how to build high-performance, scalable REST APIs using FastAPI with proper documentation and authentication.",
+            image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
+            date: "Jan 15, 2025",
+            category: "Backend Development",
+            readTime: "8 min read"
         },
         {
             id: 2,
-            title: "5 เทคนิคการอัดเสียงร้องที่บ้านให้เหมือนมืออาชีพ",
-            excerpt: "เรียนรู้วิธีการจัดห้อง เลือกไมโครโฟน และเทคนิคการบันทึกเสียงที่จะทำให้ Home Studio ของคุณคุณภาพเทียบเท่าห้องอัด",
-            image: "https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=2070&auto=format&fit=crop",
-            date: "10 พ.ค. 2024",
-            category: "Recording"
+            title: "Data Pipeline Best Practices with Python",
+            excerpt: "A comprehensive guide to designing and implementing robust data pipelines using Python, Airflow, and AWS.",
+            image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+            date: "Jan 10, 2025",
+            category: "Data Engineering",
+            readTime: "12 min read"
         },
         {
             id: 3,
-            title: "เบื้องหลังการทำเพลง ''Neon Dreams''",
-            excerpt: "พาทัวร์โปรเจกต์เพลง Synthwave ยอดฮิต ตั้งแต่เริ่มเดโมจนถึงขั้นตอนสุดท้ายของการมิกซ์",
-            image: "https://images.unsplash.com/photo-1478737270239-2f63b8625881?q=80&w=2038&auto=format&fit=crop",
-            date: "1 พ.ค. 2024",
-            category: "Behind the Scenes"
+            title: "Docker for Python Developers",
+            excerpt: "Master Docker containerization for Python applications. From basic setup to production-ready deployments.",
+            image: "https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=2071&auto=format&fit=crop",
+            date: "Jan 5, 2025",
+            category: "DevOps",
+            readTime: "10 min read"
         },
         {
             id: 4,
-            title: "เลือกไมโครโฟนยังไงให้เหมาะกับเสียงคุณ",
-            excerpt: "แนะนำประเภทของไมโครโฟนและการเลือกใช้ให้เข้ากับโทนเสียงและแนวเพลงของคุณ",
-            image: "https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop",
-            date: "25 เม.ย. 2024",
-            category: "Gear Guide"
+            title: "Async Python: A Deep Dive into Asyncio",
+            excerpt: "Understanding asynchronous programming in Python with asyncio for building high-concurrency applications.",
+            image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=2069&auto=format&fit=crop",
+            date: "Dec 28, 2024",
+            category: "Python Tips",
+            readTime: "7 min read"
         },
         {
             id: 5,
-            title: "ความแตกต่างระหว่าง Mix และ Master",
-            excerpt: "หลายคนยังสับสนระหว่างสองขั้นตอนนี้ บทความนี้จะไขข้อสงสัยให้กระจ่าง",
-            image: "https://images.unsplash.com/photo-1460023485667-17210eb738f6?q=80&w=2074&auto=format&fit=crop",
-            date: "20 เม.ย. 2024",
-            category: "Knowledge"
+            title: "Django vs Flask: Which Framework to Choose?",
+            excerpt: "Comparing Django and Flask to help you make the right choice for your next web development project.",
+            image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
+            date: "Dec 20, 2024",
+            category: "Web Development",
+            readTime: "6 min read"
         },
         {
             id: 6,
-            title: "เริ่มต้นทำเพลงต้องใช้อุปกรณ์อะไรบ้าง?",
-            excerpt: "คู่มือสำหรับมือใหม่ งบน้อยก็เริ่มได้ แนะนำอุปกรณ์ที่จำเป็นสำหรับการทำเพลง",
-            image: "https://images.unsplash.com/photo-1598653222000-6b7b7a552625?q=80&w=2070&auto=format&fit=crop",
-            date: "15 เม.ย. 2024",
-            category: "Beginner Guide"
+            title: "Automating Daily Tasks with Python Scripts",
+            excerpt: "Practical examples of automating repetitive tasks using Python. Save time and increase productivity.",
+            image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2069&auto=format&fit=crop",
+            date: "Dec 15, 2024",
+            category: "Automation",
+            readTime: "9 min read"
         }
     ];
 
@@ -60,9 +67,9 @@ const Blog = () => {
             <section className="bg-brand-black py-20 relative overflow-hidden">
                 <div className="absolute inset-0 bg-brand-gold/5 z-0"></div>
                 <div className="container mx-auto px-6 relative z-10 text-center">
-                    <h1 className="text-4xl md:text-6xl font-heading font-bold text-brand-white mb-6">บทความ <span className="text-brand-gold">ล่าสุด</span></h1>
+                    <h1 className="text-4xl md:text-6xl font-heading font-bold text-brand-white mb-6">Tech <span className="text-brand-gold">Blog</span></h1>
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                        สาระความรู้ เทคนิค และเบื้องหลังการทำงาน จากทีมงานมืออาชีพของเรา
+                        Insights, tutorials, and best practices from my journey as a Python developer.
                     </p>
                 </div>
             </section>
@@ -76,16 +83,41 @@ const Blog = () => {
                                     <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                                 </div>
                                 <div className="p-6">
-                                    <div className="flex items-center text-xs text-brand-gold mb-3 space-x-4">
+                                    <div className="flex items-center justify-between text-xs text-gray-500 mb-3">
                                         <span className="flex items-center"><Calendar size={14} className="mr-1" /> {post.date}</span>
-                                        <span className="flex items-center"><User size={14} className="mr-1" /> {post.author}</span>
+                                        <span className="text-brand-gold">{post.category}</span>
                                     </div>
-                                    <h2 className="text-xl font-bold text-white mb-3 group-hover:text-brand-gold transition-colors">{post.title}</h2>
+                                    <h2 className="text-xl font-bold text-white mb-3 group-hover:text-brand-gold transition-colors line-clamp-2">{post.title}</h2>
                                     <p className="text-gray-400 text-sm mb-4 line-clamp-3">{post.excerpt}</p>
-                                    <button className="text-brand-white text-sm font-bold hover:text-brand-gold transition-colors">Read More &rarr;</button>
+                                    <div className="flex items-center justify-between">
+                                        <span className="text-xs text-gray-500">{post.readTime}</span>
+                                        <button className="text-brand-gold text-sm font-bold flex items-center gap-1 hover:gap-2 transition-all">
+                                            Read More <ArrowRight size={14} />
+                                        </button>
+                                    </div>
                                 </div>
                             </article>
                         ))}
+                    </div>
+
+                    {/* Newsletter Section */}
+                    <div className="mt-20 bg-brand-gray/20 rounded-2xl p-8 md:p-12 text-center">
+                        <h2 className="text-2xl md:text-3xl font-heading font-bold text-brand-white mb-4">
+                            Stay Updated
+                        </h2>
+                        <p className="text-gray-400 mb-8 max-w-xl mx-auto">
+                            Get the latest articles, tutorials, and insights delivered straight to your inbox.
+                        </p>
+                        <form className="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
+                            <input
+                                type="email"
+                                placeholder="Enter your email"
+                                className="flex-grow px-6 py-3 bg-brand-black border border-white/10 rounded-full text-white focus:border-brand-gold focus:outline-none"
+                            />
+                            <button className="px-8 py-3 bg-brand-gold text-brand-black font-bold rounded-full hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all">
+                                Subscribe
+                            </button>
+                        </form>
                     </div>
                 </div>
             </section>

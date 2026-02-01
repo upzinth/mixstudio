@@ -1,72 +1,121 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Code, Github, Linkedin, Mail, Twitter } from 'lucide-react';
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
+
+    const footerLinks = {
+        quickLinks: [
+            { path: '/', label: 'Home' },
+            { path: '/about', label: 'About' },
+            { path: '/services', label: 'Services' },
+            { path: '/portfolio', label: 'Portfolio' },
+            { path: '/contact', label: 'Contact' }
+        ],
+        services: [
+            { path: '/services', label: 'Backend Development' },
+            { path: '/services', label: 'Data Engineering' },
+            { path: '/services', label: 'Automation' },
+            { path: '/services', label: 'Cloud Solutions' },
+            { path: '/services', label: 'API Development' }
+        ]
+    };
+
     return (
-        <footer className="bg-brand-gray text-brand-white pt-16 pb-8 border-t border-white/5">
+        <footer className="bg-brand-black border-t border-white/5 pt-16 pb-8">
             <div className="container mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                     {/* Brand */}
-                    <div className="md:col-span-1">
-                        <Link to="/" className="text-3xl font-heading font-bold text-brand-white mb-6 block">
-                            Mix<span className="text-brand-gold">Studio</span>
+                    <div>
+                        <Link to="/" className="flex items-center gap-2 mb-4">
+                            <div className="w-10 h-10 bg-brand-gold rounded-lg flex items-center justify-center">
+                                <Code size={24} className="text-brand-black" />
+                            </div>
+                            <span className="text-xl font-heading font-bold text-brand-white">
+                                Python<span className="text-brand-gold">Dev</span>
+                            </span>
                         </Link>
-                        <p className="text-gray-400 mb-6 text-sm leading-relaxed">
-                            ยกระดับเสียงของคุณสู่มาตรฐานระดับสากล บริการทำเพลง มิกซ์เพลง และมาสเตอร์ริ่งระดับพรีเมียม สำหรับศิลปินที่ต้องการคุณภาพที่ดีที่สุด
+                        <p className="text-gray-400 text-sm mb-6">
+                            Passionate Python developer creating scalable solutions,
+                            from backend systems to data pipelines.
                         </p>
-                        <div className="flex space-x-4">
-                            <a href="#" className="text-gray-400 hover:text-brand-gold transition-colors"><Facebook size={20} /></a>
-                            <a href="#" className="text-gray-400 hover:text-brand-gold transition-colors"><Instagram size={20} /></a>
-                            <a href="#" className="text-gray-400 hover:text-brand-gold transition-colors"><Youtube size={20} /></a>
+                        <div className="flex gap-4">
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-black transition-all">
+                                <Github size={18} />
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-black transition-all">
+                                <Linkedin size={18} />
+                            </a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-black transition-all">
+                                <Twitter size={18} />
+                            </a>
+                            <a href="mailto:hello@example.com" className="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center text-gray-400 hover:bg-brand-gold hover:text-brand-black transition-all">
+                                <Mail size={18} />
+                            </a>
                         </div>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="text-lg font-heading font-bold text-brand-gold mb-6">เมนูลัด</h4>
-                        <ul className="space-y-3 text-gray-400 text-sm">
-                            <li><Link to="/about" className="hover:text-white transition-colors">เกี่ยวกับเรา</Link></li>
-                            <li><Link to="/services" className="hover:text-white transition-colors">บริการ</Link></li>
-                            <li><Link to="/portfolio" className="hover:text-white transition-colors">ผลงาน</Link></li>
-                            <li><Link to="/blog" className="hover:text-white transition-colors">บทความ</Link></li>
-                            <li><Link to="/contact" className="hover:text-white transition-colors">ติดต่อเรา</Link></li>
+                        <h3 className="text-lg font-bold text-brand-white mb-6">Quick Links</h3>
+                        <ul className="space-y-3">
+                            {footerLinks.quickLinks.map((link, index) => (
+                                <li key={index}>
+                                    <Link
+                                        to={link.path}
+                                        className="text-gray-400 hover:text-brand-gold transition-colors text-sm"
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     {/* Services */}
                     <div>
-                        <h4 className="text-lg font-heading font-bold text-brand-gold mb-6">บริการ</h4>
-                        <ul className="space-y-3 text-gray-400 text-sm">
-                            <li><Link to="/services" className="hover:text-white transition-colors">รับทำเพลงครบวงจร</Link></li>
-                            <li><Link to="/services" className="hover:text-white transition-colors">มิกซ์ & มาสเตอร์ริ่ง</Link></li>
-                            <li><Link to="/services" className="hover:text-white transition-colors">จูนเสียงร้อง/แก้คีย์</Link></li>
-                            <li><Link to="/services" className="hover:text-white transition-colors">ทำดนตรีประกอบ</Link></li>
+                        <h3 className="text-lg font-bold text-brand-white mb-6">Services</h3>
+                        <ul className="space-y-3">
+                            {footerLinks.services.map((link, index) => (
+                                <li key={index}>
+                                    <Link
+                                        to={link.path}
+                                        className="text-gray-400 hover:text-brand-gold transition-colors text-sm"
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
-                    {/* Contact */}
+                    {/* Contact Info */}
                     <div>
-                        <h4 className="text-lg font-heading font-bold text-brand-gold mb-6">ติดต่อเรา</h4>
-                        <div className="space-y-4 text-gray-400 text-sm">
-                            <div className="flex items-start">
-                                <MapPin size={18} className="mr-3 text-brand-gold mt-1" />
-                                <span>123 ซอยดนตรี, ถนนสร้างสรรค์,<br />กรุงเทพมหานคร 10110</span>
-                            </div>
-                            <div className="flex items-center">
-                                <Phone size={18} className="mr-3 text-brand-gold" />
-                                <span>089-123-4567</span>
-                            </div>
-                            <div className="flex items-center">
-                                <Mail size={18} className="mr-3 text-brand-gold" />
-                                <span>contact@mixstudio.com</span>
-                            </div>
-                        </div>
+                        <h3 className="text-lg font-bold text-brand-white mb-6">Get in Touch</h3>
+                        <ul className="space-y-3 text-sm text-gray-400">
+                            <li className="flex items-center gap-2">
+                                <Mail size={16} className="text-brand-gold" />
+                                <a href="mailto:hello@example.com" className="hover:text-brand-gold transition-colors">
+                                    hello@example.com
+                                </a>
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <span className="text-brand-gold">📍</span>
+                                <span>Bangkok, Thailand</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <div className="border-t border-white/5 pt-8 text-center text-gray-500 text-xs">
-                    <p>&copy; {new Date().getFullYear()} MixStudio. All rights reserved.</p>
+                {/* Bottom Bar */}
+                <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-gray-500 text-sm">
+                        © {currentYear} PythonDev. All rights reserved.
+                    </p>
+                    <p className="text-gray-500 text-sm">
+                        Built with <span className="text-brand-gold">Python</span> & <span className="text-brand-gold">React</span>
+                    </p>
                 </div>
             </div>
         </footer>
