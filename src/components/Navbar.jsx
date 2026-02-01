@@ -16,12 +16,12 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', path: '/' },
-        { name: 'Services', path: '/services' },
-        { name: 'Portfolio', path: '/portfolio' },
-        { name: 'About', path: '/about' },
-        { name: 'Blog', path: '/blog' },
-        { name: 'Contact', path: '/contact' },
+        { name: 'หน้าหลัก', path: '/' },
+        { name: 'บริการของเรา', path: '/services' },
+        { name: 'ผลงาน', path: '/portfolio' },
+        { name: 'เกี่ยวกับเรา', path: '/about' },
+        { name: 'บทความ', path: '/blog' },
+        { name: 'ติดต่อเรา', path: '/contact' },
     ];
 
     return (
@@ -43,7 +43,7 @@ const Navbar = () => {
                         </Link>
                     ))}
                     <Link to="/client-area" className="px-6 py-2 bg-gradient-to-r from-brand-gold to-yellow-600 text-brand-black font-bold rounded-full hover:shadow-[0_0_15px_rgba(212,175,55,0.5)] transition-all transform hover:scale-105">
-                        Client Area
+                        ระบบสมาชิก
                     </Link>
                 </div>
 
