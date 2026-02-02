@@ -20,6 +20,13 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        const params = new URLSearchParams(location.search);
+        if (params.get('verified') === 'true') {
+            setShowLoginModal(true);
+        }
+    }, [location]);
+
     const handleMemberClick = (e) => {
         if (!user) {
             e.preventDefault();

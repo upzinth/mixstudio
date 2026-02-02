@@ -1,4 +1,6 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 import { Check, Music, Mic2, Sliders, Film, Clock } from 'lucide-react';
 
 const Services = () => {
@@ -59,6 +61,10 @@ const Services = () => {
 
     return (
         <div className="w-full pt-20">
+            <Helmet>
+                <title>บริการของเรา - MixStudio | Mixing, Mastering, Music Production</title>
+                <meta name="description" content="บริการทำเพลงครบวงจร มิกซ์ มาสเตอร์ริ่ง จูนเสียงร้อง และดนตรีประกอบ โดยทีมงานมืออาชีพ ราคาเริ่มต้น 3,500 บาท" />
+            </Helmet>
             {/* Header */}
             <section className="bg-brand-black py-20 relative overflow-hidden">
                 <div className="absolute inset-0 bg-brand-gold/5 z-0"></div>
@@ -94,16 +100,20 @@ const Services = () => {
                                             <Clock size={16} className="mr-2" />
                                             ระยะเวลา: {service.turnaround}
                                         </div>
-                                        <button className="text-brand-white font-bold text-sm tracking-wide group-hover:underline decoration-brand-gold underline-offset-4">
-                                            จองคิวบริการ →
-                                        </button>
                                     </div>
+                                    <Link
+                                        to="/client-area"
+                                        state={{ activeTab: 'upload' }}
+                                        className="text-brand-white font-bold text-sm tracking-wide group-hover:underline decoration-brand-gold underline-offset-4"
+                                    >
+                                        จองคิวบริการ →
+                                    </Link>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
-            </section >
+            </section>
 
             <section className="py-20 bg-brand-gray/10 text-center">
                 <div className="container mx-auto px-6">

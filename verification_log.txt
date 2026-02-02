@@ -1,0 +1,7 @@
+Starting Verification...
+1. Registering user: verify_1769968784039@example.com
+   Token received.
+2. Uploading file...
+   Upload Success! Project ID: 4e663755-696e-404e-9fdf-a409be6a92f8
+   File Path: /home/project/mixstudio/server/uploads/1769968784154-341683837-test_audio_node.wav
+3. File System Check: ✅ File exists on server.

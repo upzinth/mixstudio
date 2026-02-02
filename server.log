@@ -1,0 +1,123 @@
+nohup: ignoring input
+Server running on http://localhost:3000
+error: duplicate key value violates unique constraint "profiles_username_key"
+    at /home/project/mixstudio/server/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///home/project/mixstudio/server/index.js:84:25 {
+  length: 535,
+  severity: 'ERROR',
+  code: '23505',
+  detail: 'Key (username)=(Admin User) already exists.',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: 'SQL statement "insert into public.profiles (id, username, avatar_url, referral_code)\n' +
+    '  values (\n' +
+    '    new.id,\n' +
+    '    new.full_name,\n' +
+    '    new.avatar_url,\n' +
+    "    'USER-' || upper(substring(new.id::text from 1 for 6)) -- Generate a simple default referral code\n" +
+    '  )"\n' +
+    'PL/pgSQL function handle_new_user() line 3 at SQL statement',
+  schema: 'public',
+  table: 'profiles',
+  column: undefined,
+  dataType: undefined,
+  constraint: 'profiles_username_key',
+  file: 'nbtinsert.c',
+  line: '666',
+  routine: '_bt_check_unique'
+}
+error: duplicate key value violates unique constraint "profiles_username_key"
+    at /home/project/mixstudio/server/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///home/project/mixstudio/server/index.js:84:25 {
+  length: 535,
+  severity: 'ERROR',
+  code: '23505',
+  detail: 'Key (username)=(Admin User) already exists.',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: 'SQL statement "insert into public.profiles (id, username, avatar_url, referral_code)\n' +
+    '  values (\n' +
+    '    new.id,\n' +
+    '    new.full_name,\n' +
+    '    new.avatar_url,\n' +
+    "    'USER-' || upper(substring(new.id::text from 1 for 6)) -- Generate a simple default referral code\n" +
+    '  )"\n' +
+    'PL/pgSQL function handle_new_user() line 3 at SQL statement',
+  schema: 'public',
+  table: 'profiles',
+  column: undefined,
+  dataType: undefined,
+  constraint: 'profiles_username_key',
+  file: 'nbtinsert.c',
+  line: '666',
+  routine: '_bt_check_unique'
+}
+error: duplicate key value violates unique constraint "profiles_username_key"
+    at /home/project/mixstudio/server/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///home/project/mixstudio/server/index.js:84:25 {
+  length: 535,
+  severity: 'ERROR',
+  code: '23505',
+  detail: 'Key (username)=(Admin User) already exists.',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: 'SQL statement "insert into public.profiles (id, username, avatar_url, referral_code)\n' +
+    '  values (\n' +
+    '    new.id,\n' +
+    '    new.full_name,\n' +
+    '    new.avatar_url,\n' +
+    "    'USER-' || upper(substring(new.id::text from 1 for 6)) -- Generate a simple default referral code\n" +
+    '  )"\n' +
+    'PL/pgSQL function handle_new_user() line 3 at SQL statement',
+  schema: 'public',
+  table: 'profiles',
+  column: undefined,
+  dataType: undefined,
+  constraint: 'profiles_username_key',
+  file: 'nbtinsert.c',
+  line: '666',
+  routine: '_bt_check_unique'
+}
+Error: ENAMETOOLONG: name too long, open '/home/project/mixstudio/server/uploads/1769969848525-40123852-à¹à¸à¸²à¹à¸¡à¹à¸£à¸±à¸à¸­à¸¢à¹à¸²à¹à¸ªà¸·à¸­à¸ (à¸¡à¸²à¹à¸ªà¸·à¸­à¸à¹à¸à¸à¹à¸¨à¸£à¹à¸²à¸à¸±à¸à¹à¸£à¸²à¸à¸°) - Love&Rock .flac'
+Error: ENAMETOOLONG: name too long, open '/home/project/mixstudio/server/uploads/1769969855551-387610532-à¹à¸à¸²à¹à¸¡à¹à¸£à¸±à¸à¸­à¸¢à¹à¸²à¹à¸ªà¸·à¸­à¸ (à¸¡à¸²à¹à¸ªà¸·à¸­à¸à¹à¸à¸à¹à¸¨à¸£à¹à¸²à¸à¸±à¸à¹à¸£à¸²à¸à¸°) - Love&Rock .flac'
+Error: ENAMETOOLONG: name too long, open '/home/project/mixstudio/server/uploads/1769969957718-650957204-à¹à¸à¸²à¹à¸¡à¹à¸£à¸±à¸à¸­à¸¢à¹à¸²à¹à¸ªà¸·à¸­à¸ (à¸¡à¸²à¹à¸ªà¸·à¸­à¸à¹à¸à¸à¹à¸¨à¸£à¹à¸²à¸à¸±à¸à¹à¸£à¸²à¸à¸°) - Love&Rock .flac'
+error: duplicate key value violates unique constraint "profiles_username_key"
+    at /home/project/mixstudio/server/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///home/project/mixstudio/server/index.js:84:25 {
+  length: 539,
+  severity: 'ERROR',
+  code: '23505',
+  detail: 'Key (username)=(Test Candidate) already exists.',
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: 'SQL statement "insert into public.profiles (id, username, avatar_url, referral_code)\n' +
+    '  values (\n' +
+    '    new.id,\n' +
+    '    new.full_name,\n' +
+    '    new.avatar_url,\n' +
+    "    'USER-' || upper(substring(new.id::text from 1 for 6)) -- Generate a simple default referral code\n" +
+    '  )"\n' +
+    'PL/pgSQL function handle_new_user() line 3 at SQL statement',
+  schema: 'public',
+  table: 'profiles',
+  column: undefined,
+  dataType: undefined,
+  constraint: 'profiles_username_key',
+  file: 'nbtinsert.c',
+  line: '666',
+  routine: '_bt_check_unique'
+}
+Error: ENAMETOOLONG: name too long, open '/home/project/mixstudio/server/uploads/1769970237104-316913895-à¹à¸à¹à¸à¸µà¹à¸à¹à¸à¸­ à¸à¸²à¸à¸à¸µà¹à¸à¸à¹à¸£à¸²à¸à¹à¹à¸¡à¹à¹à¸à¹à¸à¹à¸­à¸à¸à¸²à¸£à¸­à¸°à¹à¸£à¸¡à¸²à¸à¹à¸à¸à¸§à¹à¸²à¸à¸µà¹ - Love&Rock.flac'
+Error: ENAMETOOLONG: name too long, open '/home/project/mixstudio/server/uploads/1769970244675-663139746-à¹à¸à¹à¸à¸µà¹à¸à¹à¸à¸­ à¸à¸²à¸à¸à¸µà¹à¸à¸à¹à¸£à¸²à¸à¹à¹à¸¡à¹à¹à¸à¹à¸à¹à¸­à¸à¸à¸²à¸£à¸­à¸°à¹à¸£à¸¡à¸²à¸à¹à¸à¸à¸§à¹à¸²à¸à¸µà¹ - Love&Rock.flac'

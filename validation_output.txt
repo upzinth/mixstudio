@@ -1,0 +1,11 @@
+                  id                  |        email         
+--------------------------------------+----------------------
+ a5168cfc-a34d-494d-9b83-8dd8fda04b6f | testuser@example.com
+(1 row)
+
+INSERT 0 1
+                  id                  | updated_at | username  |           avatar_url           | website | referral_code | referred_by 
+--------------------------------------+------------+-----------+--------------------------------+---------+---------------+-------------
+ a5168cfc-a34d-494d-9b83-8dd8fda04b6f |            | Test User | https://example.com/avatar.jpg |         | USER-A5168C   | 
+(1 row)
+

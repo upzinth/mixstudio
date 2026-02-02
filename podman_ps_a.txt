@@ -1,0 +1,2 @@
+CONTAINER ID  IMAGE                            COMMAND     CREATED         STATUS      PORTS                   NAMES
+e8733e31f098  docker.io/library/postgres:18.1  postgres    28 seconds ago  Created     0.0.0.0:5432->5432/tcp  mixstudio-db

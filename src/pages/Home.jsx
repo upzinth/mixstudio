@@ -1,4 +1,6 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Music, Mic2, Sliders, Film, GraduationCap, Play, ArrowRight } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 import gsap from 'gsap';
@@ -103,6 +105,10 @@ const Home = () => {
 
     return (
         <div className="w-full">
+            <Helmet>
+                <title>MixStudio - รับทำเพลง มิกซ์ & มาสเตอร์ริ่งระดับมืออาชีพ</title>
+                <meta name="description" content="ยกระดับเพลงของคุณให้มีคุณภาพระดับสากล ด้วยบริการ Mix & Mastering ครบวงจร โดย Sound Engineer มืออาชีพ" />
+            </Helmet>
             {/* Hero Section */}
             <section className="relative h-screen flex items-center justify-center overflow-hidden" ref={heroRef}>
                 {/* Placeholder for Video Background */}
@@ -123,12 +129,12 @@ const Home = () => {
                         ยกระดับผลงานของคุณด้วยบริการระดับพรีเมียม ทั้งการมิกซ์ มาสเตอร์ริ่ง และการผลิตเพลง ที่ออกแบบมาเพื่อศิลปินที่ต้องการคุณภาพสูงสุด
                     </p>
                     <div ref={ctaRef} className="flex flex-col md:flex-row justify-center gap-4">
-                        <button className="px-8 py-3 bg-brand-gold text-brand-black font-bold rounded-full hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all transform hover:-translate-y-1">
+                        <Link to="/services" className="px-8 py-3 bg-brand-gold text-brand-black font-bold rounded-full hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all transform hover:-translate-y-1">
                             ดูบริการของเรา
-                        </button>
-                        <button className="px-8 py-3 border border-brand-white text-brand-white font-bold rounded-full hover:bg-white hover:text-black transition-all">
+                        </Link>
+                        <Link to="/portfolio" className="px-8 py-3 border border-brand-white text-brand-white font-bold rounded-full hover:bg-white hover:text-black transition-all">
                             ชมผลงานตัวอย่าง
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -164,9 +170,9 @@ const Home = () => {
                     </div>
 
                     <div className="mt-16 text-center">
-                        <button className="text-brand-white underline underline-offset-4 decoration-brand-gold hover:text-brand-gold transition-colors">
+                        <Link to="/services" className="text-brand-white underline underline-offset-4 decoration-brand-gold hover:text-brand-gold transition-colors">
                             ดูบริการทั้งหมด
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -181,9 +187,9 @@ const Home = () => {
                                 ตัวอย่าง <span className="text-gray-500 font-light">โปรเจกต์</span>
                             </h2>
                         </div>
-                        <button className="hidden md:flex items-center text-brand-white hover:text-brand-gold transition-colors">
+                        <Link to="/portfolio" className="hidden md:flex items-center text-brand-white hover:text-brand-gold transition-colors">
                             ดูผลงานทั้งหมด <ArrowRight size={16} className="ml-2" />
-                        </button>
+                        </Link>
                     </div>
 
                     <div ref={portfolioRef} className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -212,9 +218,9 @@ const Home = () => {
                 <div className="container mx-auto px-6 text-center relative z-10">
                     <h2 className="text-4xl md:text-5xl font-heading font-bold text-brand-white mb-8">พร้อมที่จะยกระดับเสียงของคุณหรือยัง?</h2>
                     <p className="text-gray-400 mb-10 max-w-2xl mx-auto">เข้าร่วมกับศิลปินนับร้อยที่ไว้วางใจให้ MixStudio ดูแลวิสัยทัศน์ทางดนตรีของพวกเขา</p>
-                    <button className="px-10 py-4 bg-brand-gold text-brand-black font-bold text-lg rounded-full hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] transition-all transform hover:-translate-y-1">
+                    <Link to="/contact" className="px-10 py-4 bg-brand-gold text-brand-black font-bold text-lg rounded-full hover:shadow-[0_0_30px_rgba(212,175,55,0.6)] transition-all transform hover:-translate-y-1">
                         เริ่มโปรเจกต์ของคุณ
-                    </button>
+                    </Link>
                 </div>
             </section>
         </div>

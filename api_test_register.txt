@@ -1,0 +1,4 @@
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100    468 100    365 100    103   2779    784                              0100    468 100    365 100    103   2771    782                              0100    468 100    365 100    103   2764    780                              0
+{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjI3ODUwOGRhLTRjOTktNGNhMy1hZjUzLWY0YzdiZjY1NmRlNCIsImVtYWlsIjoiYXBpX3Rlc3RAZXhhbXBsZS5jb20iLCJpYXQiOjE3Njk5NjcwODYsImV4cCI6MTc3MDA1MzQ4Nn0.RjxWTPSpYS_qaR7wglGTNv7M1reF2FZ1ZFklqpMvCIw","user":{"id":"278508da-4c99-4ca3-af53-f4c7bf656de4","email":"api_test@example.com","full_name":"API Tester","avatar_url":""}}

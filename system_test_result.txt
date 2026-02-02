@@ -1,0 +1,17 @@
+1. Testing Registration...
+Response: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE2MTFiNWQ2LWFmMDAtNDg0MS04YjY1LTFhYzI0NTYyMWRjMyIsImVtYWlsIjoic3lzdGVtX3Rlc3RfMTc2OTk2NzI5MEBleGFtcGxlLmNvbSIsImlhdCI6MTc2OTk2NzI5MCwiZXhwIjoxNzcwMDUzNjkwfQ.8_JganokJeqX_vf9wmQmqWcuyCLL29QPw_CafxUa3V4","user":{"id":"1611b5d6-af00-4841-8b65-1ac245621dc3","email":"system_test_1769967290@example.com","full_name":"System Test User","avatar_url":""}}
+✅ Registration Success. Token received.
+
+2. Testing Login...
+Response: {"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE2MTFiNWQ2LWFmMDAtNDg0MS04YjY1LTFhYzI0NTYyMWRjMyIsImVtYWlsIjoic3lzdGVtX3Rlc3RfMTc2OTk2NzI5MEBleGFtcGxlLmNvbSIsImlhdCI6MTc2OTk2NzI5MCwiZXhwIjoxNzcwMDUzNjkwfQ.8_JganokJeqX_vf9wmQmqWcuyCLL29QPw_CafxUa3V4","user":{"id":"1611b5d6-af00-4841-8b65-1ac245621dc3","email":"system_test_1769967290@example.com","created_at":"2026-02-01T17:34:50.791Z","full_name":"System Test User","avatar_url":""}}
+✅ Login Success.
+
+3. Testing Get Profile (Me)...
+Response: {"user":{"id":"1611b5d6-af00-4841-8b65-1ac245621dc3","email":"system_test_1769967290@example.com","full_name":"System Test User","avatar_url":""},"profile":{"id":"1611b5d6-af00-4841-8b65-1ac245621dc3","updated_at":null,"username":"System Test User","avatar_url":"","website":null,"referral_code":"USER-1611B5","referred_by":null}}
+✅ Get Profile Success. User ID: 1611b5d6-af00-4841-8b65-1ac245621dc3
+
+4. Testing Update Profile...
+Response: {"id":"1611b5d6-af00-4841-8b65-1ac245621dc3","updated_at":"2026-02-01T17:34:50.902Z","username":"System Test User","avatar_url":"","website":"https://updated-website.com","referral_code":"USER-1611B5","referred_by":null}
+✅ Update Profile Success.
+
+🎉 All Systems Functional!

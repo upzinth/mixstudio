@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:18.1
+    container_name: mixstudio-db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: mixstudio
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./data/postgres_data:/var/lib/postgresql
